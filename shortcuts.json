@@ -1,0 +1,36 @@
+[{
+	"label": "nextWindow",
+	"title": "",
+	"icon": "quick-switch.png",
+	"keys": ["alt","tab"]
+},{
+	"label": "previousWindow",
+	"title": "",
+	"icon": "shuffle.png",
+	"keys": ["alt","shift","tab"]
+},{
+	"label": "mute",
+	"title": "mute",
+	"icon": "",
+	"keys": ["audio_mute"]
+},{
+	"label": "activate-composer",
+	"title": "éè",
+	"icon": "",
+	"keys": ["control","shift","u"]
+},{
+	"label": "e-accent-aigu",
+	"title": "é",
+	"icon": "",
+	"keys": ["e","9"]
+},{
+	"label": "e-accent-grave",
+	"title": "è",
+	"icon": "",
+	"keys": ["e","8"]
+},{
+	"label": "keytest",
+	"title": "",
+	"icon":"",
+	"keys":["t","o","c","i","l","a","r"]
+}]
