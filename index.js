@@ -3,6 +3,7 @@ var app = express()
 var cfg = require('./config.json')
 var bodyParser = require('body-parser')
 var robot = require('robotjs');
+var exec = require('child_process').exec;
 
 app.use(bodyParser.json())
 app.use('/resources', express.static(__dirname + '/resources'));
@@ -15,14 +16,15 @@ app.get('/', function (req, res) {
 
 app.get('/keys', function(req, res) {
 	var buttons = [];
-	var shortcuts = require('./shortcuts.json');
+	var shortcuts = require(cfg.shortcuts);
 
 	for (var i = 0; i < shortcuts.length; i ++) {
 		var shortcut = shortcuts[i];
+		var icon = shortcut.icon ? `./resources/icons/${shortcut.icon}` : '';
 
 		buttons.push({
 			action: shortcut.label,
-			icon: `./resources/icons/${shortcut.icon}`,
+			icon: icon,
 			title: shortcut.title
 		})
 	}
@@ -32,7 +34,7 @@ app.get('/keys', function(req, res) {
 
 
 app.get('/press', function (req, res){
-	var shortcuts = require('./shortcuts.json');
+	var shortcuts = require(cfg.shortcuts);
 	var requestedShortcut = req.query.key;
 	// to add here a validation system with session
 
@@ -40,11 +42,19 @@ app.get('/press', function (req, res){
 		var shortcut = shortcuts[i];
 
 		if (shortcut.label == requestedShortcut) {
-			for (var m = 0; m < shortcut.keys.length; m++) {
-				robot.keyToggle(shortcut.keys[m],'down');
+			if (shortcut.keys){
+				for (var m = 0; m < shortcut.keys.length; m++) {
+					console.log("K_DN: " + shortcut.keys[m]);
+					robot.keyToggle(shortcut.keys[m],'down');
+				}
+				for (var n = 0; n < shortcut.keys.length; n++) {
+					console.log("K_UP: " +shortcut.keys[n]);
+					robot.keyToggle(shortcut.keys[n],'up');
+				}
 			}
-			for (var n = 0; n < shortcut.keys.length; n++) {
-				robot.keyToggle(shortcut.keys[n],'up');
+			if (shortcut.exec) {
+				console.log("EXEC: " +shortcut.exec);
+				exec(shortcut.exec);
 			}
 		}
 	}

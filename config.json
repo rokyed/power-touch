@@ -1,3 +1,4 @@
 {
-	"listenPort": 3000
+	"listenPort": 3000,
+	"shortcuts": "./shortcuts.json"
 }
