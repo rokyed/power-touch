@@ -10,11 +10,11 @@
 	"keys": ["alt","shift","tab"]
 },{
 	"label": "mute",
-	"title": "mute",
-	"icon": "",
+	"title": "",
+	"icon": "mute.png",
 	"exec": "amixer -q sset Master toggle"
 },{
-	"label": "csgo",
-	"title": "CS:GO",
-	"exec": "steam steam://rungameid/730"
+	"label": "prep-setup",
+	"title": "AtomIO",
+	"exec": "atom"
 }]
