@@ -9,6 +9,10 @@ for the moment supports only buttons, in the future, I wish to implement, contex
 I am open to any sugestion and any feedback
 
 
+### Requirements
+Node v6.6.0
+
+
 ```
 npm install
 node index.js
