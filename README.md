@@ -9,7 +9,11 @@ for the moment supports only buttons, in the future, I wish to implement, contex
 I am open to any suggestions and any feedback
 
 
-### Requirements
+### Notes:
+* For any features, please use the issues with the "enhacement" tag
+* I am open to any suggestions and any feedback
+
+### Requirements:
 Node v6.6.0
 
 
