@@ -15,6 +15,6 @@
 	"keys": [["audio_mute"]]
 },{
 	"label": "prep-setup",
-	"title": "AtomIO",
+	"title": "Atom.IO",
 	"exec": "atom"
 }]
