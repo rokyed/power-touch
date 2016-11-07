@@ -40,18 +40,24 @@ app.get('/press', function (req, res){
 
 	for (var i = 0; i < shortcuts.length; i ++) {
 		var shortcut = shortcuts[i];
-
 		if (shortcut.label == requestedShortcut) {
 			if (shortcut.keys){
-				for (var m = 0; m < shortcut.keys.length; m++) {
-					console.log("K_DN: " + shortcut.keys[m]);
-					robot.keyToggle(shortcut.keys[m],'down');
-				}
-				for (var n = 0; n < shortcut.keys.length; n++) {
-					console.log("K_UP: " +shortcut.keys[n]);
-					robot.keyToggle(shortcut.keys[n],'up');
+				console.log("Keys:")
+				for (var z = 0; z < shortcut.keys.length; z++){
+					var batch = shortcut.keys[z];
+
+					for (var m = 0; m < batch.length; m++) {
+						console.log("K_DN: " + batch[m]);
+						robot.keyToggle(batch[m],'down');
+					}
+
+					for (var n = 0; n < batch.length; n++) {
+						console.log("K_UP: " + batch[n]);
+						robot.keyToggle(batch[n],'up');
+					}
 				}
 			}
+
 			if (shortcut.exec) {
 				console.log("EXEC: " +shortcut.exec);
 				exec(shortcut.exec);

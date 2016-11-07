@@ -2,17 +2,17 @@
 	"label": "nextWindow",
 	"title": "",
 	"icon": "quick-switch.png",
-	"keys": ["alt","tab"]
+	"keys": [["alt","tab"]]
 },{
 	"label": "previousWindow",
 	"title": "",
 	"icon": "shuffle.png",
-	"keys": ["alt","shift","tab"]
+	"keys": [["alt","shift","tab"]]
 },{
 	"label": "mute",
 	"title": "",
 	"icon": "mute.png",
-	"exec": "amixer -q sset Master toggle"
+	"keys": [["audio_mute"]]
 },{
 	"label": "prep-setup",
 	"title": "AtomIO",
