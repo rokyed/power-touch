@@ -11,15 +11,22 @@
 				element.classList.add('button');
 				element.style.backgroundImage = "url('"+button.icon+"')";
 				element.setAttribute('data-action', button.action);
+				element.setAttribute('onclick', 'BUTTONACCESS(this)');
 				element.innerHTML = button.title;
-				element.addEventListener('click', function (e) {
-					AjaxRequest({
-						url: "./press?key="+e.target.getAttribute('data-action')
-					});
-				})
+
 				div.appendChild(element);
 			}
 
 		}
-	})
+	});
+	
+	// action function required for buttons
+	window['BUTTONACCESS'] = function (e) {
+		AjaxRequest({
+			url: "./press?key="+e.getAttribute('data-action')
+		});
+	};
+
+	// make url bar dissapear in chrome
+	window.scrollTo(0,1);
 })();

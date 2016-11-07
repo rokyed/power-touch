@@ -1,18 +1,53 @@
 [{
 	"label": "nextWindow",
-	"title": "",
-	"icon": "quick-switch.png",
+	"title": "<i class='material-icons'>filter_none</i>",
+	"icon": "",
 	"keys": [["alt","tab"]]
 },{
 	"label": "previousWindow",
-	"title": "",
-	"icon": "shuffle.png",
+	"title": "<i class='material-icons'>filter_none</i>",
+	"icon": "",
 	"keys": [["alt","shift","tab"]]
 },{
+	"label": "vol-down",
+	"title": "<i class='material-icons'>volume_down</i>",
+	"icon": "",
+	"keys": [["audio_vol_down"]]
+},{
+	"label": "vol-up",
+	"title": "<i class='material-icons'>volume_up</i>",
+	"icon": "",
+	"keys": [["audio_vol_up"]]
+},{
 	"label": "mute",
-	"title": "",
-	"icon": "mute.png",
+	"title": "<i class='material-icons'>volume_off</i>",
+	"icon": "",
 	"keys": [["audio_mute"]]
+},{
+	"label": "tab-1",
+	"title": "<i class='material-icons'>looks_one</i>",
+	"icon": "",
+	"keys": [["control","1"]]
+},{
+	"label": "tab-2",
+	"title": "<i class='material-icons'>looks_two</i>",
+	"icon": "",
+	"keys": [["control","2"]]
+},{
+	"label": "tab-3",
+	"title": "<i class='material-icons'>looks_3</i>",
+	"icon": "",
+	"keys": [["control","3"]]
+},{
+	"label": "tab-4",
+	"title": "<i class='material-icons'>looks_4</i>",
+	"icon": "",
+	"keys": [["control","4"]]
+},{
+	"label": "tab-5",
+	"title": "<i class='material-icons'>looks_5</i>",
+	"icon": "",
+	"keys": [["control","5"]]
 },{
 	"label": "prep-setup",
 	"title": "Atom.IO",
