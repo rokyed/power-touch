@@ -5,6 +5,7 @@ var bodyParser = require('body-parser')
 var robot = require('robotjs');
 var exec = require('child_process').exec;
 
+app.disable('x-powered-by')
 app.use(bodyParser.json())
 app.use('/resources', express.static(__dirname + '/resources'));
 

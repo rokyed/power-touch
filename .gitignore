@@ -1,2 +1,4 @@
 node_modules
-
+*.bak
+configs/*.json
+!*.example*
