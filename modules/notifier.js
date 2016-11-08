@@ -1,16 +1,18 @@
 module.exports = {
 	notify: function (typeOfNotification, extra) {
-		var error = "";
-		var hint = "";
+		var error = ""
+		var hint = ""
 
 		switch (typeOfNotification) {
-			"missingConfig":
-				error = `missing ~/configs/${extra}`;
+			case "missingConfig":
+				error = `missing APP/configs/${extra}`
 				hint = `You can copy/rename the example config and modify accordingly.`
-				break;
+				break
 		}
 
-		console.log(error);
-		console.log(hint);
+		console.log(error)
+		console.log(hint)
+
+		return false
 	}
 }

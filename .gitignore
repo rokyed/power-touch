@@ -1,4 +1,5 @@
 node_modules
 *.bak
 configs/*.json
+configs/*.htpasswd
 !*.example*
