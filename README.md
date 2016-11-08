@@ -14,6 +14,13 @@ I am open to any suggestions and any feedback
 * For any features, please use the issues with the "enhacement" tag
 * I am open to any suggestions and any feedback
 
+### Guide:
+	Special thanks to: https://github.com/pmontrasio
+	Paolo Montrasio: "You go to http://your.pc.ip:3000 with your phone's browser. You get some keys on the screen. You touch the keys and it plays some other keys on the pc."
+
+	Also you can change anything, look in configs folder, there are examples. For the keys, I use robot.js https://github.com/octalmage/robotjs , check their doc. The keys variable requires: multi-dimensional array because keys are separated by batches and batches are composed of keys.
+
+
 ### Requirements:
 Node v6.6.0
 
