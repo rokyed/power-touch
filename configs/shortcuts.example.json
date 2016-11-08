@@ -7,4 +7,11 @@
 	"label": "cs-go-3-2-1-weapon-set",
 	"title": "<i class='material-icons'>track_changes</i>",
 	"keys": [["3"],["2"],["1"]]
+},{
+	"label": "volume",
+	"title": "Volume",
+	"type": "slider",
+	"minValue": 0,
+	"maxValue": 100,
+	"exec": "amixer set Master ${value}%"
 }]

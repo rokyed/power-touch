@@ -12,7 +12,10 @@ app.get('/', function (req, res){
 		buttons.push({
 			action: shortcut.label,
 			icon: icon,
-			title: shortcut.title
+			title: shortcut.title,
+			kType: shortcut.type ? shortcut.type : "button",
+			minValue: shortcut.minValue ? shortcut.minValue : "",
+			maxValue: shortcut.maxValue ? shortcut.maxValue : "",
 		})
 	}
 

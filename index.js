@@ -5,6 +5,7 @@ var bodyParser = require('body-parser')
 
 //local modules
 var press = require('./modules/press.js')
+var slide = require('./modules/slide.js')
 var pageGenerator = require('./modules/pageGenerator.js')
 
 // configs
@@ -22,6 +23,7 @@ app.use(bodyParser.json())
 app.use(auth.connect(basic));
 app.use('/', express.static(__dirname + '/interface'));
 app.use('/press', press)
+app.use('/slide', slide)
 app.use('/keys', pageGenerator)
 
 app.listen(cfg.listenPort, function () {

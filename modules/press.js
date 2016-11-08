@@ -9,7 +9,7 @@ app.get('/', function (req, res){
 
 	for (var i = 0; i < shortcuts.length; i ++) {
 		var shortcut = shortcuts[i];
-		if (shortcut.label == requestedShortcut) {
+		if (shortcut.label == requestedShortcut && !shortcut.type) {
 			if (shortcut.keys){
 				console.log("Keys:")
 				for (var z = 0; z < shortcut.keys.length; z++){
