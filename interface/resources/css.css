@@ -1,5 +1,5 @@
 body, html {
-	background: #333;
+	background: #000;
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -8,6 +8,7 @@ body, html {
 	user-select:none;
 	font-family: 'Roboto', sans-serif;
 	transition: all 50ms;
+	color: #fff;
 }
 
 .buttons {
@@ -25,7 +26,7 @@ body, html {
 	height: 60px;
 	display: inline-block;
 	border-radius: 3px;
-	background-color: #fff;
+
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -38,7 +39,6 @@ body, html {
 	font-size: 15px;
 	font-weight: bold;
 	user-select:none;
-	box-shadow:0 0 10px 1px rgba(0,0,0,0.5), inset 0 0 10px 1px rgba(0,0,0,0.5);
 	transition: all 50ms;
 }
 
@@ -49,17 +49,19 @@ body, html {
 
 
 .button:active {
-	background-color: #ddf !important;
+	box-shadow:0 0 10px 1px rgba(255,255,255,1), inset 0 0 10px 1px rgba(255,255,255,1);
 }
 
 .full-line {
 	width: 90%;
 	height: 60px;
 	padding: 10px;
-	background: #fff;
-	box-shadow:0 0 10px 1px rgba(0,0,0,0.5), inset 0 0 10px 1px rgba(0,0,0,0.5);
+
 	max-width: 100%;
 
+}
+.full-line span {
+	margin: 2px;
 }
 .full-line [type="range"] {
 	width: 90%;

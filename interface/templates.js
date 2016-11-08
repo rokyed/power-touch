@@ -7,7 +7,8 @@
 		],
 		"slider":[
 			'<div class="full-line">',
-				'<label>${title}',
+				'<label>',
+					'<span>${title}</span>',
 					'<input type="range" min="${minValue}" max="${maxValue}" data-action="${action}" oninput="SLIDERONCHANGE(this)" />',
 				'</label>',
 			'</div>'
