@@ -1,19 +1,19 @@
 // npm modules
-var express = require('express')
-var auth = require('http-auth');
-var bodyParser = require('body-parser')
+const express = require('express')
+const auth = require('http-auth');
+const bodyParser = require('body-parser')
 
 //local modules
-var press = require('./modules/press.js')
-var slide = require('./modules/slide.js')
-var pageGenerator = require('./modules/pageGenerator.js')
+const press = require('./modules/press.js')
+const slide = require('./modules/slide.js')
+const pageGenerator = require('./modules/pageGenerator.js')
 
 // configs
-var cfg = require('./configs/main.json')
+const cfg = require('./configs/main.json')
 
 // misc
-var app = express()
-var basic = auth.basic({
+const app = express()
+const basic = auth.basic({
     realm: "Power Touch.",
     file: __dirname + "/configs/auth.htpasswd"
 });

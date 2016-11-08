@@ -1,7 +1,6 @@
-var express = require('express')
-var app = new express.Router()
-
-var exec = require('child_process').exec;
+const express = require('express')
+const app = new express.Router()
+const executor = require('./executor.js')
 
 app.get('/', function (req, res){
 	var shortcuts = require('../configs/shortcuts.json')
@@ -11,7 +10,7 @@ app.get('/', function (req, res){
 		var shortcut = shortcuts[i]
 
 		if (shortcut.feedbackCommand) {
-			
+
 		}
 	}
 

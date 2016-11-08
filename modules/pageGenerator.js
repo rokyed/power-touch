@@ -1,13 +1,13 @@
-var express = require('express')
-var app = new express.Router()
+const express = require('express')
+const app = new express.Router()
 
 app.get('/', function (req, res){
-	var buttons = []
-	var shortcuts = require('../configs/shortcuts.json')
+	let buttons = []
+	let shortcuts = require('../configs/shortcuts.json')
 
-	for (var i = 0; i < shortcuts.length; i ++) {
-		var shortcut = shortcuts[i]
-		var icon = shortcut.icon ? `./resources/icons/${shortcut.icon}` : ''
+	for (let i = 0; i < shortcuts.length; i ++) {
+		let shortcut = shortcuts[i]
+		let icon = shortcut.icon ? `./resources/icons/${shortcut.icon}` : ''
 
 		buttons.push({
 			action: shortcut.label,
