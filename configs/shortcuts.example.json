@@ -13,5 +13,6 @@
 	"type": "slider",
 	"minValue": 0,
 	"maxValue": 100,
-	"exec": "amixer set Master ${value}%"
+	"exec": "amixer",
+	"execArgs": ["set","Master","${value}%"]
 }]
