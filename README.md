@@ -4,12 +4,16 @@ Shortcut touch keys on mobile.
 please install pm2 to start the daemon
 
 
-for the moment supports only buttons, in the future, I wish to implement, contexted button sets, contexted enhaced controls (like skippin in a song for a player)
+for the moment supports only buttons, in the future, I wish to implement, contexted button sets, contexted enhanced controls (like skipping in a song for a player)
 
-I am open to any sugestion and any feedback
+I am open to any suggestions and any feedback
 
 
-### Requirements
+### Notes:
+* For any features, please use the issues with the "enhacement" tag
+* I am open to any suggestions and any feedback
+
+### Requirements:
 Node v6.6.0
 
 
