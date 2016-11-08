@@ -10,6 +10,7 @@ I am open to any suggestions and any feedback
 
 
 ### Notes:
+* In /configs you find all the configs, just copy the files that contain .example and rename them without .example then modify them accordingly.
 * For any features, please use the issues with the "enhacement" tag
 * I am open to any suggestions and any feedback
 
