@@ -1,19 +1,11 @@
 var express = require('express')
 var app = new express.Router()
-var notifier = require('./notifier.js')
 var robot = require('robotjs');
 var exec = require('child_process').exec;
 
 app.get('/', function (req, res){
 	var shortcuts = require('../configs/shortcuts.json')
 	var requestedShortcut = req.query.key;
-	// to add here a validation system with session
-	if (!shortcuts) {
-		notifier.notify('missingConfig', 'shortcuts.json')
-		res.end(JSON.stringify({
-			success: false
-		}));
-	}
 
 	for (var i = 0; i < shortcuts.length; i ++) {
 		var shortcut = shortcuts[i];
