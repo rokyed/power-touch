@@ -44,3 +44,8 @@ The main features this app will need are:
 * Per app context: A protocol that allows the programs that use this to be able to change the context buttons, like for media playing you will have media buttons and for something like VIM you will have VIM shortcuts.
 * Per app modules: A protocol that allows anybody to build a module that will be used with a specific program e.g. the media buttons should be a module on its own.
 * More immersive controls and computer feedback: Controls like swipes, multi-finger, different gestures; computer feedback stands for updating the device ui with info that comes from the computer program, so we can make the modules contextual within a specific program e.g. Blender3D when you are in vertex editing mode we should have a specific set of buttons, that are different from when you are in compositing mode.
+
+### I need you!
+As much as I want this app to be big and powerful, I am just one man with full time job and some spare time, the spare time I use it here.
+If you wish to help, fork the repo and make your modifications, then create a pull request and we will work things out!!
+Don't forget, I am a programmer also and I need help as much as you want your feature to be in this app :D Thank you very much!!
