@@ -1,7 +1,7 @@
 ;(function() {
 	window['TEMPLATES'] = {
 		"button": [
-			'<div class="button" data-action="${action}" style="background-image:url(${icon})" onclick="BUTTONACCESS(this)">',
+			'<div class="button" data-action="${action}" style="background-image:url(${icon})" onclick="BUTTONACTIONS.buttonAccess(this)">',
 				'${title}',
 			'</div>'
 		],
@@ -9,16 +9,21 @@
 			'<div class="full-line">',
 				'<label>',
 					'<span>${title}</span>',
-					'<input type="range" min="${minValue}" max="${maxValue}" data-action="${action}" oninput="SLIDERONCHANGE(this)" />',
+					'<input type="range" min="${minValue}" max="${maxValue}" data-action="${action}" oninput="BUTTONACTIONS.sliderOnChange(this)" />',
 				'</label>',
 			'</div>'
+		],
+		"contextOption": [
+			'<option value="${value}">${value}</option>'
 		]
 	};
 	window['APPLYTEMP'] = function (template, config) {
 		var tmp = window['TEMPLATES'][template].join('');
 
 		for (var k in config) {
-			tmp = tmp.replace('${'+k+'}',config[k]);
+			var regex = new RegExp("\\$\\{"+k+"\\}","g");
+			tmp = tmp.replace(regex, config[k]);
+			console.log(config[k]);
 		}
 
 		return tmp;

@@ -3,6 +3,7 @@ const app = new express.Router()
 const robot = require('robotjs')
 const executor = require('./executor.js')
 
+
 app.get('/', function (req, res){
 	let shortcuts = require('../configs/shortcuts.json')
 	let requestedShortcut = req.query.key;

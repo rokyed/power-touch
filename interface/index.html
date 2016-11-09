@@ -7,6 +7,8 @@
 		<meta name="mobile-web-app-capable" content="yes">
 	</head>
 	<body>
+		<select class="context-options" onChange="BUTTONACTIONS.setContext(this)" onfocus="this.selectedIndex = -1;">
+		</select>
 		<div class="buttons"></div>
 		<script src="./ajax.js"></script>
 		<script src="./templates.js"></script>

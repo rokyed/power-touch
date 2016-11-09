@@ -1,18 +1,26 @@
 [{
 	"label": "mute",
+	"context": "audio",
 	"title": "mute",
 	"icon": "mute.png",
 	"keys": [["audio_mute"]]
 },{
 	"label": "cs-go-3-2-1-weapon-set",
+	"context": "csgo",
 	"title": "<i class='material-icons'>track_changes</i>",
 	"keys": [["3"],["2"],["1"]]
 },{
 	"label": "volume",
+	"context": "audio",
 	"title": "Volume",
 	"type": "slider",
 	"minValue": 0,
 	"maxValue": 100,
 	"exec": "amixer",
-	"execArgs": ["set","Master","${value}%"]
+	"execArgs": ["set","Master","${value}%"],
+	"value": {
+		"command": "amixer",
+		"args": ["get", "Master"],
+		"trimRegex": ""
+	}
 }]
