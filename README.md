@@ -1,35 +1,46 @@
 # POWER-TOUCH
-Shortcut touch keys on mobile.
+Shortcut touch keys on mobile. Inspired from Apple TouchBar but for free using the things you already own, phone and computer :D
 
 ![Alt text](/demo.gif?raw=true "Optional Title")
 
-please install pm2 to start the daemon
-
-
-for the moment supports only buttons, in the future, I wish to implement, contexted button sets, contexted enhanced controls (like skipping in a song for a player)
-
-I am open to any suggestions and any feedback
-
-
-### Notes:
-* In /configs you find all the configs, just copy the files that contain .example and rename them without .example then modify them accordingly.
-* For any features, please use the issues with the "enhacement" tag
-* I am open to any suggestions and any feedback
-
-### Guide:
-	Special thanks to: https://github.com/pmontrasio
-	Paolo Montrasio: "You go to http://your.pc.ip:3000 with your phone's browser. You get some keys on the screen. You touch the keys and it plays some other keys on the pc."
-
-	Also you can change anything, look in configs folder, there are examples. For the keys, I use robot.js https://github.com/octalmage/robotjs , check their doc. The keys variable requires: multi-dimensional array because keys are separated by batches and batches are composed of keys.
-
-
 ### Requirements:
-Node v6.6.0
-
-
+```bash
+node 6.6.0 #at least
 ```
+
+### How to install and use:
+1. Install the packages:
+```bash
+ npm i
+ ```
+2. Go in ***/configs*** and copy all the ***.example*** files while renaming them without the ***.example***
+3. Modify them to your needs
+4. Start the host: (with node alone or using pm2)
+```bash
 npm install
 node index.js
 # or
 pm2 start index.js
 ```
+5. Open the browser of your phone and go to *http://your-pc-that-hosts:port-setted-in-main-json*
+e.g. *http://192.168.0.100:3000*
+
+
+### How to write configs:
+* **auth.htpasswd** uses the node module http-auth, the module requires the config to be written as user:passsword per each line.
+* **main.json** will define the startup config, the only option for the moment is the port that the hosts listens
+* **shortcuts.json** holds all the buttons that you will see on your mobile, for the keys we use robot.js, please check the ***/modules*** files if **shortcuts.example.json** is not clear enough
+
+
+### Standards:
+For the moment we have no standards because the app is yet too young and not entirely organized. But in the near future we will start to have standards, in order to not break everybody's configs.
+
+### Special Thanks:
+Special thanks to: https://github.com/pmontrasio for writing a how to on HackerNews
+
+
+### Where are we heading:
+The main features this app will need are:
+* Per app context: A protocol that allows the programs that use this to be able to change the context buttons, like for media playing you will have media buttons and for something like VIM you will have VIM shortcuts.
+* Per app modules: A protocol that allows anybody to build a module that will be used with a specific program e.g. the media buttons should be a module on its own.
+* More immersive controls and computer feedback: Controls like swipes, multi-finger, different gestures; computer feedback stands for updating the device ui with info that comes from the computer program, so we can make the modules contextual within a specific program e.g. Blender3D when you are in vertex editing mode we should have a specific set of buttons, that are different from when you are in compositing mode.
