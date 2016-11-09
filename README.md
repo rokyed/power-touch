@@ -3,6 +3,8 @@ Shortcut touch keys on mobile. Inspired from Apple TouchBar but for free using t
 
 ![Alt text](/demo.gif?raw=true "Optional Title")
 
+In the image, I am controlling my volume from a web client (equivalent of a mobile setup)
+
 ### Requirements:
 ```bash
 node 6.6.0 #at least
