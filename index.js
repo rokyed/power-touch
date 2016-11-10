@@ -4,8 +4,7 @@ const auth = require('http-auth');
 const bodyParser = require('body-parser')
 
 //local modules
-const press = require('./modules/press.js')
-const slide = require('./modules/slide.js')
+const actions = require('./modules/actions.js')
 const pageGenerator = require('./modules/pageGenerator.js')
 
 // configs
@@ -22,8 +21,7 @@ app.disable('x-powered-by')
 app.use(bodyParser.json())
 app.use(auth.connect(basic));
 app.use('/', express.static(__dirname + '/interface'));
-app.use('/press', press)
-app.use('/slide', slide)
+app.use('/do-action', actions)
 app.use('/keys', pageGenerator)
 
 app.listen(cfg.listenPort, function () {

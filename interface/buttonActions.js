@@ -2,12 +2,12 @@
 	window['BUTTONACTIONS'] = {
 		buttonAccess: function (e) {
 			AjaxRequest({
-				url: "./press?key="+e.getAttribute('data-action')
+				url: "./do-action?key="+e.getAttribute('data-action')
 			});
 		},
 		sliderOnChange: function(e) {
 			AjaxRequest({
-				url: ['./slide?key=', e.getAttribute('data-action'), '&value=', e.value].join('')
+				url: ['./do-action?key=', e.getAttribute('data-action'), '&value=', e.value].join('')
 			});
 		},
 		setContext: function(e) {
