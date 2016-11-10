@@ -1,6 +1,5 @@
 const express = require('express')
 const app = new express.Router()
-const robot = require('robotjs');
 const executor = require('./executor.js')
 
 app.get('/', function (req, res){
@@ -9,27 +8,13 @@ app.get('/', function (req, res){
 
 	for (let i = 0; i < shortcuts.length; i ++) {
 		let shortcut = shortcuts[i];
+		
 		if (shortcut.label == requestedShortcut && !shortcut.type) {
-			if (shortcut.keys){
-				console.log("Keys:")
-				for (let z = 0; z < shortcut.keys.length; z++){
-					let batch = shortcut.keys[z]
+			if (shortcut.keys)
+				executor.press(shortcut.keys)
 
-					for (let m = 0; m < batch.length; m++) {
-						console.log("K_DN: " + batch[m])
-						robot.keyToggle(batch[m],'down')
-					}
-
-					for (let n = 0; n < batch.length; n++) {
-						console.log("K_UP: " + batch[n])
-						robot.keyToggle(batch[n],'up')
-					}
-				}
-			}
-
-			if (shortcut.exec) {
+			if (shortcut.exec)
 				executor.run(shortcut.exec, shortcut.execArgs)
-			}
 		}
 	}
 
